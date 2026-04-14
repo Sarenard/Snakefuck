@@ -1,3 +1,4 @@
 # Guidelines générales
 
-Pas de guidelines précises pour l'instant.
+Les informations de layout sont dans _LAYOUT/*.md
+

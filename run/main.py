@@ -65,3 +65,6 @@ def run_program(input_file: str) -> None:
         instruction_pointer += 1
 
     sys.stdout.flush()
+    print(pointer)
+    for start in range(0, len(tape), 64):
+        print(f"Block {start//64} :", tape[start:start + 64])

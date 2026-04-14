@@ -2,6 +2,9 @@
 
 (potentiel changement : boites plus grandes ? 1024 semble beaucoup mais serait bien.)
 La tape est composée de boites de taille 64 cases.
+On alterne des boites de travail et des boites "utiles" qui sont des objets.
+Les boites de travail sont 0 par défaut.
+Les boites utiles sont documentées ici
 
 (potentiel changement : 64? est-ce vraiment utile?)
 Les pointeurs vers les boites sont de taille 4 cases (32 bits).
@@ -16,6 +19,8 @@ Aucun clean mémoire n'est prévu.
 
 case 0 : anchor de début de boite (toujours 255)
 case 1 : anchor signifiant l'usage de la boite (0 = première boite)
+(L'allocateur mémoire ne free jamais et croit juste)
+case 2-5 : pointeur vers la prochaine case libre 
 reste : non spécifié pour l'instant (servira aux calculs locaux)
 
 ## Definition : Stack Frame (PyFrameObject)
